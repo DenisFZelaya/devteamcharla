@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25px"
+        android:checkable="false"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="64dp">
+
+                <ImageView
+                    android:id="@+id/mtrl_list_item_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/conf"
+                    android:foregroundGravity="center"
+                    android:padding="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_list_tema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@id/mtrl_list_item_icon"
+                    android:maxLines="1"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="Titulo de la charla" />
+
+                <TextView
+                    android:id="@+id/tv_list_fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_list_tema"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@id/mtrl_list_item_icon"
+                    android:maxLines="2"
+                    android:paddingEnd="16dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    tools:text="Fecha" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnList"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_horizontal"
+            android:elevation="5dp"
+            android:foreground="@android:drawable/ic_menu_edit"
+            android:foregroundGravity="center"
+            android:hapticFeedbackEnabled="true"
+            android:includeFontPadding="false" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

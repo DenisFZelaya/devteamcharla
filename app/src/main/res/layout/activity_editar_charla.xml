@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond"
+    android:orientation="vertical"
+    tools:context=".editar_charla">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    app:srcCompat="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar charla"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldNombreCharla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputENombreCharla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:hint="Nombre de la charla" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldDescCharla"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEDescCharla"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="#fff"
+                        android:hint="Descripción de la charla" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardCornerRadius="10dp">
+
+                    <DatePicker
+                        android:id="@+id/datePickerEFecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner" />
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnCEditarCharla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="editCharla"
+                    android:padding="10dp"
+                    android:text="Editar Charla"
+                    app:icon="@android:drawable/ic_menu_edit" />
+
+                <Button
+                    android:id="@+id/btn_eliminarCharla"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#9E3131"
+                    android:onClick="eliminarCharla"
+                    android:text="Eliminar charla"
+                    app:icon="@android:drawable/ic_menu_delete" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
